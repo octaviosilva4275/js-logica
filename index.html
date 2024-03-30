@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>7 Days of Code</title>
+</head>
+<body>
+    <script src="style.css"></script>
+    <header>
+        <h1>7 Days of Code</h1>
+    </header>
+
+    <container class="container">
+        <div class="exercicios">
+            <div class="dia2">
+                <h4>Dia 2: mensagem personalizada</h4>
+                <button onclick="conheceUsuario()">Exercício</button>
+                <p id="resposta2"></p>
+    
+                <script src="dia2.js"></script>
+            </div>
+
+            <div class="dia3">
+                <h4>Dia 3: árvore de decisão</h4>
+
+                <!--primeira camada da árvore: escolher entre front-end e back-end-->
+                <p>Você deseja ir para qual área da programação?</p>
+                <button id="frontEnd" onclick="frontEnd()">Front-End</button>
+                <button id="backEnd" onclick="backEnd()">Back-End</button>
+                
+                <!--segunda camada da árvore: escolher subareas dentro de front-end e back-end-->
+                <p id="grandeArea"></p>
+                <button type="button" id="react" style="display:none" onclick="escolheReact()">React</button>
+                <button id="vue" style="display:none" onclick="escolheVue()">Vue</button>
+                <button id="c#" style="display:none" onclick="escolheC()">C#</button>
+                <button id="java" style="display:none" onclick="escolheJava()">Java</button>
+                
+                <!--terceira camada da árvore: escolher entre especialização e fullstack-->
+                <p id="estrategia" style="display:none">Entendi. Você pretende se especializar ou se tornar 
+                    um dev fullstack?</p>
+                <button id="especializacao" style="display:none" onclick="escolheEspecializacao()">Especialização</button>
+                <button id="fullstack" style="display:none" onclick="escolheFullstack()">Fullstack</button>
+
+                <!--sexta camada da árvore: exibir todas as respostas informadas em uma lista-->
+                <div id="respostas" style="display:none">
+                </div>
+
+                <!--resolução no JavaScript-->
+                <script src="dia3.js"></script>
+
+            </div>
+            
+            <div class="dia4">
+                <h4>Dia 4: adivinha número</h4>
+                <p>Tente adivinhar qual número inteiro eu escolhi, entre 0 e 10!</p>
+
+                <input type="number" id="chute" placeholder="Número" />
+                <button type="submit" onclick="chutarNumero()">Chutar</button>
+                <p class="mensagem1" id="mensagem1"></p>
+
+                <script src="dia4.js"></script>
+
+            </div>
+            
+            <div class="dia5">
+                <h4>Dia 5: adicionar itens na lista de compras</h4>
+                <p>Cadastre a sua lista de compras do Supermercado, que eu organizo conforme as sessões.</p>
+                <button onclick="cadastrarProdutos()">Cadastrar produtos</button>
+                <p id="listaDeCompras"></p>
+
+                <script src="dia5.js"></script>                
+            </div>
+
+            <div class="dia6">
+                <h4>Dia 6: adicionar e remover itens na lista de compras</h4>
+                <p>Cadastre a sua lista de compras da Farmácia, que eu organizo conforme as sessões.<br>
+                    Você pode adicionar e remover os itens como quiser!
+                </p>
+                <button onclick="cadastrarProdutosDiaSeis()">Cadastrar produtos</button>
+                <p id="listaDeComprasDiaSeis"></p>
+
+                <script src="dia6.js"></script>
+            </div>
+
+            <div class="dia7">
+                <h4>Dia 7: calculadora</h4>
+                <input type="number" id="primeiroValor" placeholder="Primeiro número">
+
+                <select id="operacoes">
+                    <option value="adicao">Adição</option>
+                    <option value="subtracao">Subtração</option>
+                    <option value="multiplicacao">Multiplicação</option>
+                    <option value="divisao">Divisão</option>
+                </select>
+
+                <input type="number" id="segundoValor" placeholder="Segundo número">
+                <button onclick="calcular()">Calcular</button>
+
+                <p id="resultado"></p>
+
+                <script src="dia7.js"></script>
+            </div>
+
+        </div>
+    </container>
+
+    <footer>
+        <p>Octavio Augusto</p>
+    </footer>
+    
+</body>
+</html>
